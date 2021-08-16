@@ -73,7 +73,7 @@ MarkdownInner {
     })
     let match = parser.grammar.match(block.content)
     if(match.failed()) {
-        l("match failed on block",block)
+        console.log("match failed on block",block)
         block.content = [['plain',block.content]]
     } else {
         block.content = parser.semantics(match).content()
